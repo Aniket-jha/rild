@@ -1,0 +1,256 @@
+.mainHomeImage {
+    max-width: 200px;
+    height: 5.5rem;
+    padding: 0 65px;
+    object-fit: cover;
+    
+}
+img:last-of-type {
+    padding-left: 0;
+    
+}
+
+.inner {
+    position: relative;
+    width: 100%;
+    filter: grayscale(100%);
+    overflow: hidden;
+    height: 5rem;
+}
+
+.wrapper {
+    position: absolute;
+    display: flex;
+}
+
+section {
+    display: flex;
+    animation: swipe var(--speed) linear infinite backwards;
+}
+
+@keyframes swipe {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-100%);
+    }
+}
+
+@media screen and (max-width: 500px) {
+   
+
+    .mainHomeImage {
+        max-width: 100px;
+        height: 3.2rem;
+        padding: 0 15px;
+        object-fit: cover;
+        filter: grayscale(100%);
+    }
+}
+.mainBanner{
+    background-image: url("../../asset/building.jpg");
+    background-color: rgb(193, 193, 193);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+
+
+
+/* Current Project */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.section {
+  margin: 2rem 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.viewAllButton {
+  background: linear-gradient(to right, #2EDBBB, #0D99FF);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.description {
+  color: #64748b;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  height: 360px;
+}
+
+.smallCard {
+  height: 360px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 1.5rem;
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.cardSubtitle {
+  font-size: 0.875rem;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  opacity: 0.85;
+}
+
+.location {
+  font-size: 0.875rem;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.areaDetail, .priceDetail {
+  display: flex;
+  flex-direction: column;
+}
+
+.areaValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+.areaUnit {
+  font-size: 0.75rem;
+  opacity: 0.85;
+  font-family: 'Inter', sans-serif;
+}
+
+.priceValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+.priceUnit {
+  font-size: 0.75rem;
+  opacity: 0.85;
+  font-family: 'Inter', sans-serif;
+}
+
+.exploreButton {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.exploreButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 767px) {
+  .card {
+    height: 300px;
+  }
+  
+  .smallCard {
+    height: 300px;
+  }
+  
+  .cardTitle {
+    font-size: 1.25rem;
+  }
+  
+  .areaValue, .priceValue {
+    font-size: 1.25rem;
+  }
+}
