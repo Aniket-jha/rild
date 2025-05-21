@@ -82,7 +82,7 @@ export default function NavbarTwo() {
         <MenuList  className="hidden mainMenuItem  bg-gray-100 text-center shadow-lg border-none max-w-screen-xl  lg:block">
         <ul className="grid grid-cols-1   bg-none grid-flow-row gap-y-2 text-center  outline-none outline-0">
         <MenuItem className="subMenuText1">
-        <Link href="/aboutus" >Deals By Deals</Link></MenuItem>
+        <Link href="/deals-by-deals" >Deals By Deals</Link></MenuItem>
         <MenuItem className="subMenuText1">
           <Link href="/coliving" >Coliving Funds</Link></MenuItem>
      
@@ -93,11 +93,15 @@ export default function NavbarTwo() {
         <Collapse open={isMobileMenuOpen}>
           
           <MenuItem className="text-[1.2rem] px-2 font-[NeueMedium] py-0">
-          <Link className=""  href="/research" >
-         NMIMS
+          <Link className=""  href="/deals-by-deals" >
+          Deals By Deals
       </Link>
       </MenuItem>
-         
+      <MenuItem className="text-[1.2rem] px-2 font-[NeueMedium] py-0">
+          <Link className=""  href="/coliving" >
+       Coliving Funds
+      </Link>
+      </MenuItem>
         </Collapse>
       </div>
     </React.Fragment>
@@ -123,8 +127,8 @@ export default function NavbarTwo() {
         color="blue-gray"
         className="p-1 font-[NeueMedium] tracking-wider text-white text-[18px]"
       >
-        <Link href="/properties" className="flex items-center">
-         How It Works
+        <Link href="/about-rild" className="flex items-center">
+        About RILD
         </Link>
       </Typography>
       {/* <Typography

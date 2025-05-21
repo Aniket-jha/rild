@@ -1,0 +1,5 @@
+.aboutMainBannerBox{
+    background-image: url("../../asset/aboutBanner.png");
+    background-position: center;
+    background-size: cover;
+}
