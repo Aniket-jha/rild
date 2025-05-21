@@ -17,6 +17,7 @@ import ContactPage from '@/components/Home/Contactpg.js'
 import ColivingAbout from '@/components/Coliving/ColivingAbout.js'
 import InvestmentBenefits from '@/components/Coliving/InvestmentBenefits.js'
 import StayUpdated from '@/components/Coliving/StayUpdated.js'
+import ColivingBanner from '@/components/Coliving/ColivingBanner.js'
 const ColivingMain = () => {
   
 
@@ -27,10 +28,10 @@ const ColivingMain = () => {
         <NavbarTwo />
         <div className=''>
     <Suspense fallback={<p>Loading video...</p>}>
-       <HomeBanner/>
+       <ColivingBanner />
        </Suspense>
-       <ColivingAbout/>
-       <InvestmentBenefits/>
+       {/* <ColivingAbout/>
+       <InvestmentBenefits/> */}
        <StayUpdated/>
        {/* <Featured /> */}
        {/* <Amenities /> */}
