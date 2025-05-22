@@ -1,0 +1,10 @@
+.dealsBannerBox{
+    background-image: url("../../asset/dealsbydealsBanner.webp");
+    background-position: center;
+    background-size: cover;
+}
+.dealsCTABox{
+    background-image: url("../../asset/dealsbydealscta.png");
+    background-position: center;
+    background-size: cover;
+}
