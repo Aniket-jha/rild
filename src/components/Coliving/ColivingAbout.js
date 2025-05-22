@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import img from "../../asset/hamlet.png"
+import MainBannerImage from "../../asset/mainBanner.webp"
 
 export default function ColivingAbout() {
   return (
@@ -10,8 +10,8 @@ export default function ColivingAbout() {
         {/* Left side image */}
         <div className="w-full md:w-1/2">
           <div className="relative rounded-lg overflow-hidden h-auto  shadow-lg">
-            <img
-              src="../../asset/hamlet.png"
+            <Image
+              src={MainBannerImage}
               alt="Modern coliving space lobby" 
               fill
               className="object-cover"
