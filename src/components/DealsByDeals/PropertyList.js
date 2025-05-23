@@ -5,6 +5,7 @@ import ElevateImage from "../../asset/Elv8.webp"
 import Image from 'next/image'
 import { GrLocationPin } from 'react-icons/gr'
 import { FaLocationPin } from 'react-icons/fa6'
+import Link from 'next/link'
 
 const PropertyList = () => {
   return (
@@ -22,6 +23,7 @@ const PropertyList = () => {
                 <div><p className='text-[#cf3e3e] bg-opacity-20 text-center px-6 mt-4 py-3 rounded-lg bg-[#ff2727]'>Sold Out</p></div>
                 </div>
             </div>
+            <Link href="/bougainStudio">
             <div className='rounded-lg'>
                 <Image className='rounded-t-lg' src={BogainImage} />
                 <div className="bg-white rounded-b-lg py-6 px-4">
@@ -30,6 +32,7 @@ const PropertyList = () => {
                 <div><p className=' bg-opacity-20 text-center px-6 mt-4 py-3 rounded-lg text-[#FFFEFC] bg-gradient-to-r from-[#3ECF95] to-[#0068de]'>Explore Now</p></div>
                 </div>
             </div>
+            </Link>
             <div className='rounded-lg'>
                 <Image className='rounded-t-lg' src={ElevateImage} />
                 <div className="bg-white rounded-b-lg py-6 px-4">
