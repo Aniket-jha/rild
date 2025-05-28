@@ -36,7 +36,7 @@ export default function Testimonials() {
       <div className=" ">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="lg:text-4xl text-[1.2rem] font-bold text-gray-900 mb-2">Real People, Real Returns!</h2>
+          <h2 className="lg:text-4xl text-[1.2rem] font-bold text-gray-900 mb-2">Hear from our Investors</h2>
           <p className="text-gray-600 lg:text-[1rem] text-[.8rem]">Smart investments. Stable growth. Passive income made easy.</p>
         </div>
 

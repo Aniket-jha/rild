@@ -26,7 +26,7 @@ const Home = () => {
     <Suspense fallback={<p>Loading video...</p>}>
        <HomeBanner/>
        </Suspense>
-       <WhyInvest />
+       {/* <WhyInvest /> */}
        <ProjectsSection />  
        <HowItWorks />
        <Investments />

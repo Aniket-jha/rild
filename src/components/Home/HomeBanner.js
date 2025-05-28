@@ -57,7 +57,7 @@ const HomeBanner = ({homeContent}) => {
             </span> </span></h2>
             <p className='text-white pt-4 text-[1rem] lg:text-[1.5rem]'>High-Yield Real Estate, Reserved for <br /> the 1% Now Yours.</p>
               <div className="col-span-3 hidden md:col-span-1 md:flex items-center justify-end " >
-       <Link href='/form'> <button className="uppercase mt-8 flex items-center justify-center gap-3 rounded-lg shadow-md  font-[NeueRegular] ease-in duration-300  text-[12px] md:text-[16px]  hover:shadow-none hover:bg-[#272727] tracking-wider py-[8px] px-[24px] md:py-[12px] md:px-[24px] text-[#FFFEFC] bg-gradient-to-r from-[#3ECF95] to-[#0068de]" >Explore Deals </button></Link>
+       <Link href='/form'> <button className="uppercase mt-8 flex items-center justify-center gap-3 rounded-lg shadow-md  font-[600] ease-in duration-300  text-[12px] md:text-[16px]  hover:shadow-none hover:bg-[#272727] tracking-wider py-[8px] px-[24px] md:py-[12px] md:px-[24px] text-[#FFFEFC] bg-gradient-to-r from-[#3ECF95] to-[#0068de]" >Explore Deals </button></Link>
        </div>
             </div>
        

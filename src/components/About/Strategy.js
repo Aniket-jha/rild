@@ -27,7 +27,7 @@ const Strategy = () => {
                     </div>
                 </div>
                 <div className='flex items-center rounded-lg justify-start gap-4 py-6 px-4 bg-[#F1F4FE]'>
-                    <div className='bg-white lg:w-[70px] w-[50px] h-[50px] rounded-lg lg:h-[70px]] py-2 px-2'>
+                    <div className='bg-white lg:w-[70px] w-[50px] h-[50px] rounded-lg lg:h-[70px] py-2 px-2'>
                         <HiOutlineCubeTransparent className='lg:text-[3rem] text-[2rem]' />
                     </div>
                     <div className='text-[#11193C]'>

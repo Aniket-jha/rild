@@ -109,7 +109,7 @@ export default function NavbarTwo() {
   }
  
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col font-[NeueMedium] text-white lg:mb-0 lg:mt-0 lg:justify-end lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mb-4 mt-2 flex flex-col font-[NeueMedium] text-white lg:mb-0 lg:mt-0 lg:justify-center lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
         
@@ -168,26 +168,25 @@ export default function NavbarTwo() {
  
   return (
     <>
-     <div className="fixed bg-white  top-0 left-0 w-full z-[999]">
+     <div className="w-full">
         
-        {/* <div
-          className={`transition-all duration-300 ease-in-out ${
-            hideTopbar ? "-translate-y-full" : "translate-y-0"
-          }`}
-        >
-          <Topbar />
-        </div>
-   */}
-  <Navbar
-  className={`fixed top-0 z-[999] w-full max-w-full  backdrop-blur-none transition-all duration-300 ease-in-out border-none shadow-none rounded-none px-4 py-2 lg:px-16 lg:py-6 ${
-    topNav ? 'bg-[#11193C] text-black' : 'bg-transparent bg-opacity-0 text-white'
+     <div className="w-full">
+  <Topbar />
+</div>
+  
+<Navbar
+  className={`z-[999] w-full  max-w-full transition-all bg-transparent duration-300 ease-in-out border-none shadow-none rounded-none px-4 py-2 lg:px-16 lg:py-3 ${
+    topNav ? 'fixed top-0 bg-[#11193C] text-black' : 'fixed mt-[0px] bg-transparent text-white'
   }`}
 >
-  <div className="grid grid-cols-5 justify-between items-center text-white">
+  <div className="grid grid-cols-3   items-center text-white">
     <Link className="col-span-1" href="/">
       <Image className="w-[70px]" src={Logo} alt="Logo" />
     </Link>
-    <div className="hidden lg:block col-span-4">{navList}</div>
+    <div className="hidden md:col-span-1 col-span-3 md:flex items-center  justify-end lg:block ">{navList}</div>
+    <div className="col-span-3 hidden md:col-span-1 md:flex items-center justify-end " >
+       <Link href='/form'> <button className="uppercase flex items-center justify-center gap-3 rounded-lg shadow-md  font-[NeueMedium] ease-in duration-300  text-[12px] md:text-[16px]  hover:shadow-none hover:bg-[#272727] tracking-wider py-[8px] px-[24px] md:py-[12px] md:px-[24px] text-[#FFFEFC] bg-gradient-to-r from-[#3ECF95] to-[#0068de]" >Get Started</button></Link>
+       </div>
     <IconButton
       variant="text"
       className="ml-auto h-6 w-6 col-span-4 text-white hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"

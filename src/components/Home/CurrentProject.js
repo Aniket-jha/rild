@@ -7,37 +7,70 @@ import Image from "next/image"
 import PropertyOne from "../../asset/1.png"
 import PropertyTwo from "../../asset/2.png"
 import PropertyThree from "../../asset/Untitled design - 2025-05-14T222024.404.png"
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+  EffectCoverflow
+} from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { IoIosArrowDropleft } from "react-icons/io";
+import { IoIosArrowDropright } from "react-icons/io";
+import { HiArrowLongLeft } from "react-icons/hi2";
+import { HiArrowLongRight } from "react-icons/hi2";
+import { FaDotCircle } from "react-icons/fa";
 // Sample project data
 const projects = [
   {
     id: 1,
-    title: "House of Balewadi",
+    title: "Elevate",
     subtitle: "Revolutionizing Real Estate Investments",
-    location: "Balewadi",
-    area: "1534",
-    price: "Rs: 24L",
+    location: "Viman Nagar,Pune",
+    area: "7.25%",
+    price: "50L",
     priceType: "Onwards",
     image: PropertyOne,
+    oppurtunityType:"Live Opportunity"
   },
   {
     id: 2,
-    title: "Hamlet",
+    title: "Bougain Studio",
     subtitle: "Revolutionizing Real Estate Investments",
-    location: "Baner, Pune",
-    area: "2100",
-    price: "Rs: 45L",
+    location: "Balewadi,Pune",
+    area: "7.25%",
+    price: "Rs: 40L",
     priceType: "Onwards",
     image: PropertyTwo,
+      oppurtunityType:"Few Left"
   },
   {
     id: 3,
-    title: "Zest",
+    title: "Hamlet",
     subtitle: "Revolutionizing Real Estate Investments",
-    location: "Chembur",
-    area: "1250",
-    price: "Rs: 32L",
+    location: "Baner,Pune",
+    area: "7.5%",
+    price: "Rs: 44L",
     priceType: "Onwards",
     image: PropertyThree,
+      oppurtunityType:"Sold Out"
+  },
+  {
+    id: 4,
+    title: "Truspace Premiera",
+    subtitle: "Revolutionizing Real Estate Investments",
+    location: "Koregaon Park, Pune",
+    area: "7%",
+    price: "Rs: 50L",
+    priceType: "Onwards",
+    image: PropertyThree,
+      oppurtunityType:"Sold Out"
   },
   
 ]
@@ -75,9 +108,21 @@ export default function ProjectsCarousel() {
     <div className="lg:px-16 lg:py-12 px-6 py-6">
       <div className="flex justify-between items-center mb-4">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-900">Current Projects</h2>
-          <p className="text-gray-600 mt-2 w-full lg:max-w-2xl">
-            We craft intuitive, secure websites that simplify complex investment data and build user trust.
+          <h2 className="text-3xl md:text-4xl font-bold mr-3 text-navy-900">Current  
+          <span
+              style={{
+                background:
+                  "linear-gradient(to right, #3ECF95 0%, #0068de 100%)",
+                "-webkit-background-clip": "text",
+                "-webkit-text-fill-color": "transparent",
+              }}
+              className="py-2 ml-3   inline"
+            >
+              Live Opportunities
+            </span>
+            </h2>
+          <p className="text-gray-600 mt-2 w-full lg:max-w-xl">
+          Handpicked assets. Verified leases. Transparent returns. Designed for the modern real estate investor
           </p>
         </div>
         <button className="bg-emerald-500 hidden lg-block text-white px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors">
@@ -85,15 +130,49 @@ export default function ProjectsCarousel() {
         </button>
       </div>
 
-      <div className="relative mt-8">
-        <div className="overflow-hidden" ref={carouselRef}>
-          <motion.div
-            className="flex"
-            initial={false}
-            animate={{ x: -currentIndex * (carouselRef.current?.offsetWidth || 0) }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          >
+       <div className='pt-4 ' >
+            <Swiper
+          spaceBetween={10}
+          className="mt-6"
+          draggable={true}
+          breakpoints={{
+            350: {
+          width: 450,
+          slidesPerView: 1.5,
+        },
+            450: {
+          width: 450,
+          slidesPerView: 1.5,
+        },
+        576: {
+          width: 576,
+          slidesPerView: 2,
+        },
+        780: {
+          width: 780,
+          slidesPerView: 3,
+        },
+         1200: {
+          width: 1200,
+          slidesPerView: 3.5,
+        },
+       
+         1440:{
+          width:1440,
+          slidesPerView:1.8
+        }
+      }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction:true,
+          }}
+          loop={true}
+          
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
             {projects.map((project) => (
+              <SwiperSlide>
               <div key={project.id} className="min-w-full md:min-w-[80%] lg:min-w-[70%] pr-0 md:pr-6">
                 <div className="bg-white rounded-xl overflow-hidden shadow-lg">
                   <div className="relative h-[300px] md:h-[400px]">
@@ -103,16 +182,19 @@ export default function ProjectsCarousel() {
                       fill
                       className="object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
+                    <div className="absolute flex items-center justify-start gap-2 font-[600] uppercase text-[0.7rem] top-[5%] z-[999] bg-white px-3 py-2 rounded-lg right-[2%]">
+                     <FaDotCircle className="text-red-600 text-[1rem]" /> {project.oppurtunityType}
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col px-3 py-6 justify-end lg:p-6">
                       <h3 className="text-white text-xl md:text-2xl font-bold">{project.title}</h3>
-                      <p className="text-white/80 text-sm">{project.subtitle}</p>
+                      {/* <p className="text-white/80 text-sm">{project.subtitle}</p> */}
                       <p className="text-white/80 text-sm mt-1">{project.location}</p>
 
                       <div className="flex justify-between flex-col lg:flex-row items-start lg:items-center mt-4">
                         <div className="flex items-center space-x-8 lg:space-x-4">
-                          <div>
+                          <div className="flex items-center flex-col justify-center">
                             <p className="text-white text-[1rem] lg:text-2xl font-bold">{project.area}</p>
-                            <p className="text-white/80 text-xs">sqft</p>
+                            <p className="text-white/80 text-xs">Yield</p>
                           </div>
                           <div>
                             <p className="text-white text-[1rem] lg:text-2xl font-bold">{project.price}</p>
@@ -127,43 +209,19 @@ export default function ProjectsCarousel() {
                   </div>
                 </div>
               </div>
+              </SwiperSlide>
             ))}
-          </motion.div>
+        
+      
+       
+         </Swiper>
+         <div className='flex items-center mt-6 gap-6 justify-center' >
+         
+        {/* <button className="arrow-left  mt-3 arrow">
+        <HiArrowLongRight className='text-[40px] text-[#FC7451]' />
+        </button> */}
         </div>
-
-        <button
-          onClick={handlePrev}
-          disabled={currentIndex === 0}
-          className={`absolute top-1/2 left-2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md z-10 ${
-            currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-white"
-          }`}
-        >
-          <ChevronLeft className="h-6 w-6" />
-        </button>
-
-        <button
-          onClick={handleNext}
-          disabled={currentIndex === projects.length - 1}
-          className={`absolute top-1/2 right-2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-md z-10 ${
-            currentIndex === projects.length - 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-white"
-          }`}
-        >
-          <ChevronRight className="h-6 w-6" />
-        </button>
-
-        <div className="flex justify-center mt-4 space-x-2">
-          {projects.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`h-2 w-2 rounded-full transition-colors ${
-                currentIndex === index ? "bg-emerald-500" : "bg-gray-300"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-      </div>
+            </div>
     </div>
   )
 }

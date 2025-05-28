@@ -6,7 +6,7 @@ const UnionLiving = () => {
   return (
     <div className='lg:px-12 bg-[#EBEBEB] lg:py-12 px-3 py-6 gap-6 items-center grid grid-cols-1 lg:grid-cols-2 grid-flow-row'>
         <div>
-            <h3 className='lg:text-[1.5rem] text-[1.3rem]'>Our Co-Living Leasing Partner
+            <h3 className='lg:text-[1rem] text-[0.8rem]'>What is Union Living. How the Partnership / Role Works?
             </h3>
             <h2 className='lg:text-[2.5rem] font-[600] text-[2rem]'>Union Living</h2>
             <div className='mt-3 '>

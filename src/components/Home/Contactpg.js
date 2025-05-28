@@ -28,13 +28,13 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="w-full bg-white py-8 px-4 md:py-12 md:px-8">
-      <div className="max-w-6xl mx-auto">
+    <div className="w-full bg-[#11193C] py-8 px-4 md:py-12 md:px-8">
+      <div className="max-w-full mx-auto">
         {/* Header Section */}
         <div className="text-center mb-8">
-          <p className="text-blue-500 font-medium uppercase tracking-wide">CONTACT US</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Have Questions?</h1>
-          <p className="text-gray-600 mt-2">We'd love to hear from you. Please fill out this form.</p>
+          <p className="text-gray-200 font-medium uppercase tracking-wide">CONTACT US</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mt-2">Have Questions?</h1>
+          <p className="text-gray-300 mt-2">We'd love to hear from you. Please fill out this form.</p>
         </div>
 
         {/* Contact Section */}
@@ -51,12 +51,12 @@ export default function ContactPage() {
           </div>
 
           {/* Right - Form Section */}
-          <div className="w-full md:w-1/2 bg-white p-6 md:p-8">
+          <div className="w-full md:w-1/2  p-6 md:p-8">
             <form onSubmit={handleSubmit}>
               {/* Name Fields */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-4">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <div className="flex-1">
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-100 mb-1">
                     First name
                   </label>
                   <input
@@ -66,12 +66,12 @@ export default function ContactPage() {
                     value={formData.firstName}
                     onChange={handleChange}
                     placeholder="First name"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    className="w-full px-0 py-2 border-b-[1px] text-white bg-transparent border-gray-300  focus:outline-none"
                     required
                   />
                 </div>
                 <div className="flex-1">
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-100 mb-1">
                     Last name
                   </label>
                   <input
@@ -81,15 +81,15 @@ export default function ContactPage() {
                     value={formData.lastName}
                     onChange={handleChange}
                     placeholder="Last name"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    className="w-full px-0 py-2 border-b-[1px] text-white bg-transparent border-gray-300  focus:outline-none"
                     required
                   />
                 </div>
               </div>
 
               {/* Email Field */}
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              <div className="mb-8">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-100 mb-1">
                   Email
                 </label>
                 <input
@@ -99,14 +99,14 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="you@company.com"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="w-full px-0 py-2 border-b-[1px] text-white bg-transparent border-gray-300  focus:outline-none"
                   required
                 />
               </div>
 
               {/* Phone Field */}
-              <div className="mb-4">
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+              <div className="mb-8">
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-100 mb-1">
                   Phone number
                 </label>
                 <input
@@ -116,13 +116,13 @@ export default function ContactPage() {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="+1 (555) 000-0000"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="w-full px-0 py-2 border-b-[1px] text-white bg-transparent border-gray-300  focus:outline-none"
                 />
               </div>
 
               {/* Message Field */}
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+              <div className="mb-8">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-100 mb-1">
                   Message
                 </label>
                 <textarea
@@ -131,14 +131,11 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  className="w-full px-0 py-2 border-b-[1px] text-white bg-transparent border-gray-300  focus:outline-none"
                 />
               </div>
 
-              {/* Privacy Policy */}
-              <div className="mb-6 text-sm text-gray-600">
-                You agree to our friendly <a href="#" className="underline text-gray-800">privacy policy</a>
-              </div>
+            
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-3">
@@ -148,12 +145,7 @@ export default function ContactPage() {
                 >
                   Submit
                 </button>
-                <button
-                  type="button"
-                  className="flex-1 bg-white hover:bg-gray-50 text-gray-800 font-medium py-2 px-4 border border-gray-300 rounded-md transition-colors"
-                >
-                  Explore Deals
-                </button>
+               
               </div>
             </form>
           </div>
